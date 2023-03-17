@@ -1,0 +1,40 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5vw 1vw;
+    border-bottom: 1px solid rgb(168, 168, 168);
+    background-color: var(--nav-bg-color);
+    color: var(--font-color-sec);
+}
+
+.navbar * {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-left{
+    column-gap: 0.5vw;
+}
+
+.nav-center{
+}
+
+.nav-right{
+
+}
+
+.searchBar-container{
+    background-color: var(--bg-color-sec);
+    border-radius: 2rem;
+    padding: 0 1rem;
+}
+
+.searchBar-container input{
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    background-color: transparent;
+    color: var(--font-color-main);
+}
