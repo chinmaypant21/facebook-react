@@ -1,11 +1,10 @@
-*{
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
 :root{
     --nav-bg-color: #242526;
     --font-color-main: #ededed;
     --font-color-sec: #aeaeae;
     --bg-color-sec: rgba(117, 117, 117, 0.237)
+}
+*{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
