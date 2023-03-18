@@ -7,6 +7,8 @@ const Home = () => {
             <NavBar />
             <div className="home-container">
                 <SideBar />
+                <Feed />
+                <FriendBar />
             </div>
         </>
     )
