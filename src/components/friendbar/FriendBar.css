@@ -1,0 +1,6 @@
+.friendbar-container{
+    background-color: blue;
+    flex: 2;
+    height: var(--height-home-sidebar);
+    overflow-y: scroll;
+}

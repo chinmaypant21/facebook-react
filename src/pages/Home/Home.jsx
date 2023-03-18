@@ -1,10 +1,14 @@
-import Navbar from "../../components/navbar/Navbar"
+import { Feed, FriendBar, SideBar, NavBar } from "../../components"
+import './Home.css'
 
 const Home = () => {
     return(
-        <div>
-            <Navbar />
-        </div>
+        <>
+            <NavBar />
+            <div className="home-container">
+                <SideBar />
+            </div>
+        </>
     )
 }
 

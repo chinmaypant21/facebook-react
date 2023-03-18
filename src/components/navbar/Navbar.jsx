@@ -1,8 +1,8 @@
 import SearchBar from './SearchBar'
-import { Icon, IconButton } from '@mui/material'
-import './Navbar.css'
+import { IconButton } from '@mui/material'
+import './NavBar.css'
 import { Logo, HomeIcon, WatchIcon, MenuIcon, MessengerIcon, NotifyIcon } from '../../utils/icons'
-const Navbar = () => {
+const NavBar = () => {
     return(
         <div className='navbar'>
             <div className="nav-left">
@@ -42,4 +42,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar;
+export default NavBar;

@@ -1,0 +1,7 @@
+.sidebar-container{
+    background-color: green;
+    flex: 2;
+    height: var(--height-home-sidebar);
+    overflow-y: scroll;
+
+}
