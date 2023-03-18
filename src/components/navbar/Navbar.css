@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0.5vw 1vw;
-    border-bottom: 1px solid rgb(168, 168, 168);
+    height: 3.4vw;
+    padding: 0.1vw 1vw;
+    border-bottom: 2px solid rgb(52, 52, 52);
     background-color: var(--nav-bg-color);
     color: var(--font-color-sec);
 }
@@ -11,30 +12,69 @@
 .navbar * {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .nav-left{
+    margin: 0.3vw 0;
     column-gap: 0.5vw;
 }
 
-.nav-center{
-}
-
-.nav-right{
-
+.nav-left > *:first-child{
+    height: 100%;
+    width: 100%;
 }
 
 .searchBar-container{
+    height: 2.5vw;
     background-color: var(--bg-color-sec);
     border-radius: 2rem;
-    padding: 0 1rem;
+    padding: 0 1vw;
+}
+
+.searchBar-container *:first-child {
+    font-size: 1.5vw !important;
 }
 
 .searchBar-container input{
-    height: 100%;
+    font-size: 1.1vw !important;
     border: none;
     outline: none;
-    font-size: 1.1em;
     background-color: transparent;
     color: var(--font-color-main);
+}
+
+/* .nav-center{
+    align-self: center;
+} */
+
+.nav-center > div{
+    height: 3vw;
+    border-radius: 0.3em;
+}
+
+.nav-center *{
+    font-size: 2vw !important;
+    width: 8vw !important;
+}
+
+.nav-center > *:hover{
+    background-color: rgba(88, 93, 96, 0.491);
+}
+
+
+.nav-right{
+    padding: 0.5vw 0;
+    gap: 0.5vw;
+}
+
+.nav-right *{
+    font-size: 1.5vw !important;
+
+}
+
+.nav-right > button{
+    background-color: var(--bg-color-sec);
+    color: var(--font-color-main);
+    border-radius: 2vw;
 }

@@ -1,6 +1,7 @@
 import SearchBar from './SearchBar'
+import { Icon, IconButton } from '@mui/material'
 import './Navbar.css'
-import { Logo, HomeIcon, WatchIcon, MenuIcon, MessengerIcon, NotifyIcon } from '../../utils/constants'
+import { Logo, HomeIcon, WatchIcon, MenuIcon, MessengerIcon, NotifyIcon } from '../../utils/icons'
 const Navbar = () => {
     return(
         <div className='navbar'>
@@ -10,14 +11,32 @@ const Navbar = () => {
             </div>
             
             <div className="nav-center">
-                <HomeIcon />
-                <WatchIcon />
+                <div>
+                    <HomeIcon />
+                </div>
+
+                <div>
+                    <WatchIcon />
+                </div>
             </div>
 
             <div className="nav-right">
-                <MenuIcon />
-                <MessengerIcon />
-                <NotifyIcon />
+                <IconButton>
+                    <MenuIcon />
+                </IconButton>
+
+                <IconButton>
+                    <MessengerIcon sx={{transform:'rotate(-20deg)'}} />
+                </IconButton>
+
+                <IconButton>
+                    <NotifyIcon sx={{transform:'rotate(-20deg)'}} />
+                </IconButton>
+
+                <IconButton>
+                    <div style={{height:'1em', width:'1em'}}></div>
+                </IconButton>
+
             </div>
         </div>
     )

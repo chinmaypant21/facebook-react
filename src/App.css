@@ -2,9 +2,15 @@
     --nav-bg-color: #242526;
     --font-color-main: #ededed;
     --font-color-sec: #aeaeae;
-    --bg-color-sec: rgba(117, 117, 117, 0.237)
+    --bg-color-main: #18191a;
+    --bg-color-sec: #7575753c;
+    --bg-btn-color-sec: #3a3b3c;
 }
 *{
     margin: 0;
     font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: var(--bg-color-main);
 }
