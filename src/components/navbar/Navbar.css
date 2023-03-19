@@ -46,9 +46,6 @@
     color: var(--font-color-main);
 }
 
-/* .nav-center{
-    align-self: center;
-} */
 
 .nav-center > div{
     height: 3vw;
@@ -57,11 +54,11 @@
 
 .nav-center *{
     font-size: 2vw !important;
-    width: 8vw !important;
+    width: 6vw !important;
 }
 
 .nav-center > *:hover{
-    background-color: rgba(88, 93, 96, 0.491);
+    background-color: var(--bg-hover-main);
 }
 
 

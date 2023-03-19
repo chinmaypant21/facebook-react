@@ -1,7 +1,7 @@
 import SearchBar from './SearchBar'
 import { IconButton } from '@mui/material'
 import './NavBar.css'
-import { Logo, HomeIcon, WatchIcon, MenuIcon, MessengerIcon, NotifyIcon } from '../../utils/icons'
+import { Logo, HomeIcon, WatchIcon, MarketIcon, GroupIcon, MenuIcon, MessengerIcon, NotifyIcon } from '../../utils/icons'
 const NavBar = () => {
     return(
         <div className='navbar'>
@@ -17,6 +17,14 @@ const NavBar = () => {
 
                 <div>
                     <WatchIcon />
+                </div>
+
+                <div>
+                    <MarketIcon />
+                </div>
+
+                <div>
+                    <GroupIcon />
                 </div>
             </div>
 

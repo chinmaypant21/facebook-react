@@ -1,6 +1,38 @@
 .friendbar-container{
-    background-color: blue;
-    flex: 2;
-    height: var(--height-home-sidebar);
-    overflow-y: scroll;
+    /* flex: 2; */
+    /* height: var(--height-home-sidebar);
+    overflow-y: scroll; */
+}
+
+.friendbar-wrapper{
+    padding: 0.5vw 0;
+    font-size: 1vw;
+}
+
+.friendbar-wrapper > *{
+    padding: 1vw 0;
+    margin-left: 0.5vw;
+}
+
+.birthday-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.7vw;
+    color: var(--font-color-main);
+}
+
+.section-heading{
+    font-size: 1.1vw;
+    color: var(--font-color-sec);
+}
+
+.birthday-container img{
+    height: 2vw;
+    width:  2vw;
+}
+
+.birthday-container div{
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5vw;
 }

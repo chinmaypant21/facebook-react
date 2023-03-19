@@ -2,5 +2,36 @@
     display: flex;
     justify-content: space-between;
     margin: 0 1vw;
-    background-color: red;
+    /* background-color: red; */
 }
+
+.home-container > *{
+    height: var(--height-home-sidebar);
+    overflow-y: hidden;
+}
+
+.home-container > *:hover{
+    overflow-y: scroll;
+}
+
+.home-container > *:nth-child(1){
+    flex: 2;
+}
+
+.home-container > *:nth-child(2){
+    flex: 5;
+}
+
+.home-container > *:nth-child(3){
+    flex: 2;
+}
+
+::-webkit-scrollbar {
+    width: 0.5vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--home-scrollbar-bg);
+    /* background-clip: padding-box; */
+    border-radius: 0.4vw;
+  }

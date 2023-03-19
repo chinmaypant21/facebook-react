@@ -5,11 +5,21 @@
     --bg-color-main: #18191a;
     --bg-color-sec: #7575753c;
     --bg-btn-color-sec: #3a3b3c;
+    --bg-hover-main: #3a3b3c;
+    --icon-col-main: #c4ced4;
+    --home-scrollbar-bg: #3e4042;
+
+    --divider-color:#3e4042;
+    
+    /* Sidebar Icon svg gradients */
+    --icon-grad-i: #7de7eb;
+    --icon-grad-f: #067bda;
 
     --height-navbar: 3.4vw;
     /* total navbar length = navbar height + border height + padding height*/
     --height-home-sidebar: calc(100vh - var(--height-navbar) - 0.1vw - 0.2vw); 
 }
+
 *{
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -17,4 +27,8 @@
 
 body{
     background-color: var(--bg-color-main);
+}
+
+.top-hr-outline{
+    border-top: 1px solid var(--divider-color);
 }

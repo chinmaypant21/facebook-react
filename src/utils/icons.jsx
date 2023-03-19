@@ -3,8 +3,13 @@ export {Home as HomeIcon} from '@mui/icons-material';
 export {OndemandVideo as WatchIcon} from '@mui/icons-material';
 export {Apps as MenuIcon} from '@mui/icons-material';
 export {Send as MessengerIcon} from '@mui/icons-material';
+export {Storefront as MarketIcon} from '@mui/icons-material';
+export {Groups as GroupIcon} from '@mui/icons-material';
+export {default as HeartIcon} from '@mui/icons-material/Favorite';
 export {default as NotifyIcon} from '@mui/icons-material/Notifications';
 export {default as SearchIcon} from '@mui/icons-material/Search';
+
+export {default as GiftIcon} from '../assets/gift.png'
 
 export const Logo = () => (
     <svg viewBox="0 0 36 36" fill="url(#jsc_s_2)" height="40" width="40">

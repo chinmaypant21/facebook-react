@@ -1,4 +1,9 @@
 .feed-container{
-    background-color: yellow;
-    flex: 5;
+    /* background-color: yellow; */
+    /* flex: 5; */
+    /* height: var(--height-home-sidebar); */
+    /* overflow-y: scroll; */
 }
+
+/* document.addEventListener("scroll", (event) => {
+    document.getElementById('aab').scroll(0,window.scrollY)}) */
