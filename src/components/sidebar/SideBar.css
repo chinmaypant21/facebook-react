@@ -1,6 +1,8 @@
-/* .sidebar-container:hover{
-    overflow-y: scroll;
-} */
+.sidebar-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .sidebar-wrapper{
     display: flex;
@@ -67,6 +69,7 @@ ul a:hover{
 
 footer{
     padding-top: 1vw;
+    padding-bottom: 1vw;
     margin-right: 1vw;
     color: var(--font-color-sec);
 }
