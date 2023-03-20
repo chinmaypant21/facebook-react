@@ -1,5 +1,10 @@
 .feed-container{
 }
 
-/* document.addEventListener("scroll", (event) => {
-    document.getElementById('aab').scroll(0,window.scrollY)}) */
+.feed-wrapper{
+    padding: 1vw 0;
+}
+
+.feed-posts{
+    margin: 0 6vw;
+}
