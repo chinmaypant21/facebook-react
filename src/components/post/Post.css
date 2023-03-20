@@ -31,6 +31,7 @@
 
 .profile-name{
     color: var(--icon-col-main);
+    font-size: 1.1vw;
     font-weight: 600;
 }
 
