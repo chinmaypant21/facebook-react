@@ -5,12 +5,14 @@
     /* background-color: red; */
 }
 
-.home-container > *{
+.sidebar-fixed{
     height: var(--height-home-sidebar);
     overflow-y: hidden;
+    position: sticky;
+    top: var(--height-navbar-total);
 }
 
-.home-container > *:hover{
+.sidebar-fixed:hover{
     overflow-y: scroll;
 }
 
@@ -26,12 +28,13 @@
     flex: 2;
 }
 
-::-webkit-scrollbar {
+/* Scrollbars */
+
+.sidebar-fixed::-webkit-scrollbar {
     width: 0.5vw;
 }
 
-::-webkit-scrollbar-thumb {
+.sidebar-fixed::-webkit-scrollbar-thumb {
     background-color: var(--home-scrollbar-bg);
-    /* background-clip: padding-box; */
     border-radius: 0.4vw;
-  }
+}

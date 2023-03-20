@@ -4,7 +4,7 @@ import { HeartIcon } from "../../utils/icons";
 
 const SideBar = () => {
     return (
-        <div className="sidebar-container">
+        <div className="sidebar-container sidebar-fixed">
             <div className="sidebar-wrapper">
                 <IconGradient id='sidebar-icon-gradient' startGradient={'var(--icon-grad-i)'} stopGradient={'var(--icon-grad-f)'}/> 
                 {

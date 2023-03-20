@@ -1,18 +1,13 @@
-.sidebar-container{
-    color: var(--icon-col-main);
-    flex: 2;
-    /* overflow-y: hidden; */
-}
-
-.sidebar-container:hover{
+/* .sidebar-container:hover{
     overflow-y: scroll;
-}
+} */
 
 .sidebar-wrapper{
     display: flex;
     flex-direction: column;
     padding: 0.6vw 0;
     font-size: 1vw;
+    color: var(--icon-col-main);
 }
 
 .sidebar-btn{
@@ -37,7 +32,7 @@
     border-radius: 0.7vw;
     font-weight: 600;
     font-size: 1.1vw;
-    background-color: rgba(75, 81, 86, 0.619);
+    background-color: var(--bg-hover-sec);
 }
 
 .sidebar-btn div:nth-child(1) *{

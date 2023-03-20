@@ -6,6 +6,7 @@
     --bg-color-sec: #7575753c;
     --bg-btn-color-sec: #3a3b3c;
     --bg-hover-main: #3a3b3c;
+    --bg-hover-sec: #4b51569e;
     --icon-col-main: #c4ced4;
     --home-scrollbar-bg: #3e4042;
 
@@ -17,7 +18,8 @@
 
     --height-navbar: 3.4vw;
     /* total navbar length = navbar height + border height + padding height*/
-    --height-home-sidebar: calc(100vh - var(--height-navbar) - 0.1vw - 0.2vw); 
+    --height-navbar-total : calc(var(--height-navbar) + 0.1vw + 0.2vw);
+    --height-home-sidebar: calc(100vh - var(--height-navbar-total));
 }
 
 *{

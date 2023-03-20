@@ -1,12 +1,7 @@
-.friendbar-container{
-    /* flex: 2; */
-    /* height: var(--height-home-sidebar);
-    overflow-y: scroll; */
-}
-
 .friendbar-wrapper{
     padding: 0.5vw 0;
     font-size: 1vw;
+    color: var(--font-color-main);
 }
 
 .friendbar-wrapper > *{
@@ -18,11 +13,13 @@
     display: flex;
     flex-direction: column;
     row-gap: 0.7vw;
-    color: var(--font-color-main);
 }
 
 .section-heading{
     font-size: 1.1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: var(--font-color-sec);
 }
 
@@ -35,4 +32,53 @@
     display: flex;
     flex-direction: row;
     column-gap: 0.5vw;
+}
+
+.icon-btn{
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vw;
+}
+
+.icon-btn:hover{
+    background-color: var(--bg-color-sec);
+}
+
+.profile-element{
+    background: transparent;
+    cursor: pointer;
+    border: none;
+
+    display: flex;
+    flex-direction: row;
+    column-gap: 1vw;
+    align-items: center;
+    padding: 0.6vw 0;
+    margin-right: 0.5vw;
+    font-size: 1vw;
+    font-weight: 500;
+    
+    transition: all 0.4s ease;
+}
+
+.profile-image-container{
+    position: relative;
+}
+
+.profile-image-container img{
+    height: 2.4vw;
+    width: 2.4vw;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-element:hover{
+    padding-left: 0.5vw;
+    border-radius: 0.7vw;
+    font-weight: 600;
+    font-size: 1.1vw;
+    background-color: var(--bg-hover-sec);
 }
