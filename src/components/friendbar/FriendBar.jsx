@@ -28,6 +28,7 @@ const FriendBar = () => {
                                 <div className="profile-element" key={item.id}>
                                     <div className="profile-image-container">
                                         <img src={require('../../' + item.profilePicture)} alt={item.username}/>
+                                        <div className="profile-status-marker"></div>
                                     </div>
                                     <div>{item.username}</div>
                                 </div>
