@@ -83,6 +83,10 @@
     justify-content: center;
 }
 
+.impression-btn-container > * > *{
+    font-size: 1.4vw !important;
+}
+
 .impression-btn-container > *:hover{
     border-radius: 0.3vw;
     background-color: var(--bg-hover-main);
