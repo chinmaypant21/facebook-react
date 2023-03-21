@@ -13,8 +13,8 @@ const Post = ({item}) => {
     const [likeCount, setLikeCount] = useState(0)
     const [commentCount, setCommentCount] = useState(0)
     const [commentText, setCommentText] = useState('')
+    const [commentArray, setCommentArray] = useState([])
   
-
     const updateLike = () => {
         if(!imageLiked){
             setLikeCount(likeCount+1)
@@ -28,14 +28,14 @@ const Post = ({item}) => {
     }
 
     const createComment = (x) => {
-        console.log(x)
+        commentArray.push(x);
         setCommentCount(commentCount+1);
     }
 
     useEffect(()=>{
         setLikeCount(item.likeCount)
         setCommentCount(item.commentCount)
-    },[item])
+    },[item,commentArray])
     return (
         <div className="post-container" key={item.id}>
             <div className="post-head">
@@ -73,6 +73,13 @@ const Post = ({item}) => {
                     <div><ShareIcon />&nbsp;Share</div>
                 </div>
                 <div className="post-comment-container top-hr-outline">
+                    <div className="post-comments" id="post-comments">
+                        {
+                            commentArray.map(item => (
+                                <Comment value={item} />
+                            ))
+                        }
+                    </div>
                     <div className="comment-input">
                          <InputEmoji ref={commentInputRef}
                             value={commentText}
@@ -81,12 +88,9 @@ const Post = ({item}) => {
                             onEnter={(e)=>{createComment(e)}}
                             placeholder="Write a comment..."
                         />
-                        <IconButton>
+                        <IconButton onClick={(e)=>{}}>
                             <MessengerIcon sx={{fontSize:'inherit'}}/>
                         </IconButton>
-                    </div>
-                    <div className="post-comments">
-                        <Comment />
                     </div>
                 </div>
             </div>

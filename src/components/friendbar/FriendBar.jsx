@@ -10,7 +10,7 @@ const FriendBar = () => {
                     <h4 className="section-heading">Birthdays</h4>
                     <div>
                         <img src={GiftImg} alt="Surprise"/>
-                        <p><b>{'dsfodsjfiosd'}</b> and <b>{'2 others'}</b> have their birthdays today.</p>
+                        <p><b>{'Alex Durden'}</b> and <b>{'2 others'}</b> have their birthdays today.</p>
                     </div>
 
                 </div>

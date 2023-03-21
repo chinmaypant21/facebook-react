@@ -1,5 +1,6 @@
 import "./Feed.css"
 import Post from "../post/Post";
+import Status from "../status/Status";
 import { Posts } from "../../utils/dummyData";
 
 const Feed = () => {
@@ -7,7 +8,9 @@ const Feed = () => {
         <div className="feed-container">
             <div className="feed-wrapper">
                 <div className="feed-stories"></div>
-                <div className="feed-create-post"></div>
+                <div className="feed-create-post">
+                    <Status />
+                </div>
                 <div className="feed-posts">
                     {
                         Posts.map(item => (
