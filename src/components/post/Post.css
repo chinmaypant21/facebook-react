@@ -92,3 +92,47 @@
     border-radius: 0.3vw;
     background-color: var(--bg-hover-main);
 }
+/* **** */
+
+.comment-input{
+    display: flex;
+    font-size: 1.8vw;
+    align-items: center;
+    background-color: var(--input-bg);
+    border-radius: 1.5vw;
+    padding: 0 0.5vw;
+    margin: 0.4vw 0.3vw;
+}
+
+.comment-input button{
+    font-size: 1.5vw;
+    padding: 0.5vw !important;
+    color: var(--font-color-sec );
+}
+
+.comment-input .react-emoji{
+    margin-left: 0.5vw;
+    margin-right: 0.1vw;
+}
+
+.comment-input .react-emoji *{
+    font-size: 0.9vw !important;
+    border: none !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    color: var(--font-color-main) !important;
+}
+
+.comment-input .react-input-emoji--container{
+    margin: 0;
+}
+
+.comment-input .react-input-emoji--placeholder{
+    font-weight: 200;
+    left: 0;
+}
+
+.comment-input .react-input-emoji--button--icon{
+    height: 1.3vw;
+    width: 1.3vw;
+}

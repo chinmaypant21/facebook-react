@@ -1,14 +1,21 @@
 import "./Post.css"
-import { PublicIcon, LikeIcon, CommentIcon, ShareIcon } from "../../utils/icons"
-import { useState, useEffect } from "react"
+import { PublicIcon, LikeIcon, CommentIcon, ShareIcon, MessengerIcon, EmojiIcon } from "../../utils/icons"
+import { useState, useEffect, useRef } from "react"
+import { IconButton } from "@mui/material"
+import InputEmoji from 'react-input-emoji'
+import Comment from "./Comment"
 
 const Post = ({item}) => {
+
+    const commentInputRef = useRef(null);
 
     const [imageLiked, setImageLiked] = useState(false)
     const [likeCount, setLikeCount] = useState(0)
     const [commentCount, setCommentCount] = useState(0)
+    const [commentText, setCommentText] = useState('')
+  
 
-    const getLike = () => {
+    const updateLike = () => {
         if(!imageLiked){
             setLikeCount(likeCount+1)
             setImageLiked(true)
@@ -20,8 +27,9 @@ const Post = ({item}) => {
         }
     }
 
-    const getComment = () => {
-
+    const createComment = (x) => {
+        console.log(x)
+        setCommentCount(commentCount+1);
     }
 
     useEffect(()=>{
@@ -33,7 +41,7 @@ const Post = ({item}) => {
             <div className="post-head">
                 <div className="post-author-profile">
                     <div className="profile-img">
-                        <img src={require(`../../${"assets/person/10.jpeg"}`)}></img>
+                        <img src={require(`../../${"assets/person/10.jpeg"}`)} />
                     </div>
                     <div>
                         <div className="profile-name">John Doe</div>
@@ -60,12 +68,26 @@ const Post = ({item}) => {
                     <div>{commentCount} Comments</div>
                 </div>
                 <div className="impression-btn-container top-hr-outline">
-                    <div onClick={getLike} style={{color: imageLiked ? 'var(--like-color)' : 'unset'}}><LikeIcon />&nbsp;Like</div>
-                    <div onClick={getComment}><CommentIcon />&nbsp;Comment</div>
+                    <div onClick={updateLike} style={{color: imageLiked ? 'var(--like-color)' : 'unset'}}><LikeIcon />&nbsp;Like</div>
+                    <div onClick={()=>{commentInputRef.current.focus()}}><CommentIcon />&nbsp;Comment</div>
                     <div><ShareIcon />&nbsp;Share</div>
                 </div>
                 <div className="post-comment-container top-hr-outline">
-                    
+                    <div className="comment-input">
+                         <InputEmoji ref={commentInputRef}
+                            value={commentText}
+                            onChange={setCommentText}
+                            cleanOnEnter
+                            onEnter={(e)=>{createComment(e)}}
+                            placeholder="Write a comment..."
+                        />
+                        <IconButton>
+                            <MessengerIcon sx={{fontSize:'inherit'}}/>
+                        </IconButton>
+                    </div>
+                    <div className="post-comments">
+                        <Comment />
+                    </div>
                 </div>
             </div>
         </div>

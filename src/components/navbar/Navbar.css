@@ -30,7 +30,7 @@
 
 .searchBar-container{
     height: 2.5vw;
-    background-color: var(--bg-color-sec);
+    background-color: var(--input-bg);
     border-radius: 2rem;
     padding: 0 1vw;
 }

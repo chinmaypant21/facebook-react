@@ -8,6 +8,7 @@ export {Groups as GroupIcon} from '@mui/icons-material';
 export {Public as PublicIcon} from '@mui/icons-material';
 export {default as LikeIcon} from '@mui/icons-material/ThumbUpOffAlt';
 export {default as CommentIcon} from '@mui/icons-material/ChatBubbleOutline';
+export {default as EmojiIcon} from '@mui/icons-material/TagFaces';
 export {default as ShareIcon} from '@mui/icons-material/Reply';
 export {default as HeartIcon} from '@mui/icons-material/Favorite';
 export {default as NotifyIcon} from '@mui/icons-material/Notifications';
