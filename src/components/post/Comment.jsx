@@ -1,4 +1,5 @@
 const Comment = ({value}) => {
+    if (value != '') 
     return(
         <div className="comment-container">
             <div className="profile-img">

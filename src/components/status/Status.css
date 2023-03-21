@@ -1,0 +1,46 @@
+.status-container{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--nav-bg-color);
+    padding: 0.5vw 1vw 0.8vw 1vw;
+    border-radius: 0.7vw;
+}
+
+.status-field{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.status-text-div{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.1vw;
+    color: var(--font-color-sec);
+    padding: 0.7vw 1vw;
+    width: 100%;
+    margin-bottom:0.5vw;
+}
+
+.status-text-div:hover{
+    cursor: pointer;
+    background-color: var(--bg-hover-sec-alt);
+}
+    
+
+.status-button{
+    display: flex;
+    flex-direction: row;
+    padding-top: 0.7vw;
+}
+
+.status-button > div > *{
+    font-size: 2vw !important;
+}
+
+.status-button >*{
+    column-gap: 0.3vw;
+    color: var(--font-color-sec);
+    font-weight: 600;
+}

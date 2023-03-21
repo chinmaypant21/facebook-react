@@ -89,6 +89,7 @@
 }
 
 .impression-btn-container > *:hover{
+    cursor: pointer;
     border-radius: 0.3vw;
     background-color: var(--bg-hover-main);
 }

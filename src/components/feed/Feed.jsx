@@ -7,7 +7,6 @@ const Feed = () => {
     return (
         <div className="feed-container">
             <div className="feed-wrapper">
-                <div className="feed-stories"></div>
                 <div className="feed-create-post">
                     <Status />
                 </div>

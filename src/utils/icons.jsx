@@ -13,6 +13,8 @@ export {default as ShareIcon} from '@mui/icons-material/Reply';
 export {default as HeartIcon} from '@mui/icons-material/Favorite';
 export {default as NotifyIcon} from '@mui/icons-material/Notifications';
 export {default as SearchIcon} from '@mui/icons-material/Search';
+export {default as AddPhotoIcon} from '@mui/icons-material/AddPhotoAlternate';
+export {default as LiveTvIcon} from '@mui/icons-material/LiveTv';
 
 export {default as GiftImg} from '../assets/gift.png'
 

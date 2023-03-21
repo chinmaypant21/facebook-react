@@ -27,8 +27,8 @@ const Post = ({item}) => {
         }
     }
 
-    const createComment = (x) => {
-        commentArray.push(x);
+    const createComment = (comment) => {
+        setCommentArray([...commentArray,comment]);
         setCommentCount(commentCount+1);
     }
 
@@ -75,8 +75,8 @@ const Post = ({item}) => {
                 <div className="post-comment-container top-hr-outline">
                     <div className="post-comments" id="post-comments">
                         {
-                            commentArray.map(item => (
-                                <Comment value={item} />
+                            commentArray.map((item,idx) => (
+                                <Comment value={item} key={idx} />
                             ))
                         }
                     </div>
@@ -88,8 +88,8 @@ const Post = ({item}) => {
                             onEnter={(e)=>{createComment(e)}}
                             placeholder="Write a comment..."
                         />
-                        <IconButton onClick={(e)=>{}}>
-                            <MessengerIcon sx={{fontSize:'inherit'}}/>
+                        <IconButton onClick={(e)=>{createComment(commentText); setCommentText('')}}>
+                            <MessengerIcon sx={{fontSize:'inherit'}} />
                         </IconButton>
                     </div>
                 </div>

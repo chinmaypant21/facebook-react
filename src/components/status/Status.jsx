@@ -1,3 +1,6 @@
+import './Status.css'
+import { LiveTvIcon, AddPhotoIcon, EmojiIcon } from '../../utils/icons'
+
 const Status = () => {
     return (
         <div className="status-container">
@@ -5,22 +8,24 @@ const Status = () => {
                 <div className="profile-img">
                     <img src={require('../../assets/person/1.jpeg')}/>
                 </div>
-                <div className="comment-input">
-                    <div>What on your mind, John?</div>
+                <div className="comment-input status-text-div">
+                    <div>What's on your mind, John?</div>
                 </div>
             </div>
-            <div className="top-hr-outline">
+            <div className="status-button impression-btn-container top-hr-outline">
                 <div>
+                    <LiveTvIcon sx={{color:'red'}}/>
                     Live Video
                 </div>
                 <div>
-                    Photo/Video
+                    <AddPhotoIcon sx={{color:'#45bd62'}}/>
+                    Photo/video
                 </div>
                 <div>
-                    Feeling/Activity
+                    <EmojiIcon sx={{color:'#f7b928'}}/>
+                    Feeling
                 </div>
             </div>
-            <div className="status-button"></div>
         </div>
     )
 }
