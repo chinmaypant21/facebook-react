@@ -6,6 +6,7 @@ export {Send as MessengerIcon} from '@mui/icons-material';
 export {Storefront as MarketIcon} from '@mui/icons-material';
 export {Groups as GroupIcon} from '@mui/icons-material';
 export {Public as PublicIcon} from '@mui/icons-material';
+export {Clear as CloseIcon} from '@mui/icons-material';
 export {default as LikeIcon} from '@mui/icons-material/ThumbUpOffAlt';
 export {default as CommentIcon} from '@mui/icons-material/ChatBubbleOutline';
 export {default as EmojiIcon} from '@mui/icons-material/TagFaces';

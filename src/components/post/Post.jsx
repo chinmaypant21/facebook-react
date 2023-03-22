@@ -35,7 +35,7 @@ const Post = ({item}) => {
     useEffect(()=>{
         setLikeCount(item.likeCount)
         setCommentCount(item.commentCount)
-    },[item,commentArray])
+    },[item])
     return (
         <div className="post-container" key={item.id}>
             <div className="post-head">
