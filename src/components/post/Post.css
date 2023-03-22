@@ -99,6 +99,39 @@
     border-radius: 0.3vw;
     background-color: var(--bg-hover-main);
 }
+
+.post-like-btn{
+    position: relative;
+}
+
+.post-like-btn .like-react-popup{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    column-gap: 0.3vw;
+    bottom: 5.1vw;
+    left: 0vw;
+    background-color: var(--bg-color-main);
+    
+}
+
+.like-react-popup div{
+    background-color: var(--bg-color-main);
+    width: 2.5vw;
+    position: relative;
+}
+.like-react-popup img{
+    position: absolute;
+    height: 2.5vw;
+    /* width: 100%; */
+}
+
+.like-react-popup img:hover{
+    height: 2.8vw;
+}
+
 /* **** */
 
 .comment-input{

@@ -1,5 +1,6 @@
 import "./Post.css"
 import { PublicIcon, LikeIcon, CommentIcon, ShareIcon, MessengerIcon } from "../../utils/icons"
+import { LikeReactions } from "../../utils/iconUtils"
 import { useState, useEffect, useRef } from "react"
 import { IconButton } from "@mui/material"
 import InputEmoji from 'react-input-emoji'
@@ -85,7 +86,16 @@ const Post = ({item}) => {
                     <div>{commentCount} Comments</div>
                 </div>
                 <div className="impression-btn-container top-hr-outline">
-                    <div onClick={updateLike} style={{color: imageLiked ? 'var(--like-color)' : 'unset'}}><LikeIcon />&nbsp;Like</div>
+                    <div className="post-like-btn" onClick={updateLike} style={{color: imageLiked ? 'var(--like-color)' : 'unset'}}>
+                        <div className="like-react-popup">
+                        {
+                            LikeReactions.map((icon)=>(
+                                <div><img src={icon}/></div>
+                            ))
+                        }
+                        </div>
+                        <LikeIcon />&nbsp;Like
+                    </div>
                     <div onClick={()=>{commentInputRef.current.focus()}}><CommentIcon />&nbsp;Comment</div>
                     <div><ShareIcon />&nbsp;Share</div>
                 </div>
