@@ -2,17 +2,23 @@ import "./Feed.css"
 import Post from "../post/Post";
 import Status from "../status/Status";
 import { Posts } from "../../utils/dummyData";
+import { useEffect, useState } from "react";
 
 const Feed = () => {
+    const [a,b] = useState(Posts)
+    useEffect(()=>{
+        console.log('here')
+        // b(Posts)
+    },[])
     return (
         <div className="feed-container">
             <div className="feed-wrapper">
                 <div className="feed-create-post">
-                    <Status />
+                    <Status b={b} a={a}/>
                 </div>
                 <div className="feed-posts">
                     {
-                        Posts.map(item => (
+                        a.map(item => (
                             <Post item = {item}/>
                         ))
                     }

@@ -104,6 +104,17 @@
     font-size: 1.6vw !important;
 }
 
+.post-img-preview{
+    margin: 1vw 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-img-preview img{
+    max-width: 100%;
+}
+
 .post-add-img-div{
     display: flex;
     flex-direction: row;

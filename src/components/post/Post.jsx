@@ -1,5 +1,5 @@
 import "./Post.css"
-import { PublicIcon, LikeIcon, CommentIcon, ShareIcon, MessengerIcon, EmojiIcon } from "../../utils/icons"
+import { PublicIcon, LikeIcon, CommentIcon, ShareIcon, MessengerIcon } from "../../utils/icons"
 import { useState, useEffect, useRef } from "react"
 import { IconButton } from "@mui/material"
 import InputEmoji from 'react-input-emoji'
@@ -32,12 +32,19 @@ const Post = ({item}) => {
         setCommentCount(commentCount+1);
     }
 
+    const handlePhotoURL = (photoURL) => (
+        photoURL.startsWith("blob")
+        ? photoURL
+        : require(`../../${photoURL}`)
+    )
+
     useEffect(()=>{
-        setLikeCount(item.likeCount)
-        setCommentCount(item.commentCount)
+        setLikeCount(item?.likeCount || 0)
+        setCommentCount(item?.commentCount || 0)
     },[item])
+
     return (
-        <div className="post-container" key={item.id}>
+        <div className="post-container" key={item?.id}>
             <div className="post-head">
                 <div className="post-author-profile">
                     <div className="profile-img">
@@ -45,23 +52,33 @@ const Post = ({item}) => {
                     </div>
                     <div>
                         <div className="profile-name">John Doe</div>
-                        <div className="post-time">{item.time} <span>&nbsp;·&nbsp;</span> <PublicIcon sx={{fontSize:"1vw"}}/></div>
+                        <div className="post-time">{item.time || 'Just Now'} <span>&nbsp;·&nbsp;</span> <PublicIcon sx={{fontSize:"1vw"}}/></div>
                     </div>
                 </div>
 
                 <div className="post-description">
-                    {item.desc}
+                    {item?.desc}
                 </div>
             </div>
 
-            <div className="post-img">
-                <img src={require(`../../${item.photo}`)} alt={item.desc} />
-            </div>
+            {
+                (item?.photo !== undefined)
+                ? 
+                    <div className="post-img">
+                        <img src={handlePhotoURL(item.photo)} alt={item?.desc} />
+                    </div>
+                :
+                    <></>
+            }
 
             <div className="post-impression post-foot">
                 <div className="post-impression-display">
                     <div>{
-                        imageLiked ? `You and ${likeCount - 1} others`
+                        imageLiked ? 
+                            (likeCount>1 ?
+                                `You and ${likeCount - 1} others`
+                                : 'You Liked'
+                            )
                         : `${likeCount} Likes`
                     }
                     </div>

@@ -4,18 +4,38 @@ import { useState } from 'react'
 import Modal from '@mui/material/Modal';
 import {IconButton, TextField} from "@mui/material"
 
-const Status = () => {
+const Status = ({a,b}) => {
 
     const [createPostModalOpen, setCreatePostModalOpen] = useState(false)
     const [textValue,setTextValue] = useState('')
+    const [postInputImg, setPostInputImg] = useState()
 
     function handleValueChange(e) {
         setTextValue(e.target.value)
-        console.log(textValue)
     }
 
     function createPost() {
         setCreatePostModalOpen(true);
+    }
+
+    function handleImgInput(e) {
+        const path = URL.createObjectURL(e.target.files[0])
+        setPostInputImg(path)
+    }
+
+    function postStatus() {
+        const e = {
+            // time: 'Just now',
+            desc:textValue,
+            photo:postInputImg
+        }
+
+        setTimeout(()=>{
+            b([e,...a])
+            setCreatePostModalOpen(false)
+        },1000)
+        setTextValue('')
+        setPostInputImg()
     }
 
     return (
@@ -69,16 +89,30 @@ const Status = () => {
                             placeholder="What's on your mind, Chinmay?"
                             onChange={handleValueChange}
                         />
-                        <div className='post-add-img-div'>
-                            <div>
-                                <AddPhotoIcon sx={{color:'#45bd62'}}/>
-                            </div>
-                            <span>
-                                Add to your post
-                            </span>
+                        <div className='post-img-preview'>
+                        {
+                            postInputImg
+                            ? <img src={postInputImg}/>
+                            : <></>
+                        }
                         </div>
+                        <label htmlFor='inputImage'>
+                            <div className='post-add-img-div'>
+                                <div>
+                                    <AddPhotoIcon sx={{color:'#45bd62'}}/>
+                                </div>
+                                <span>
+                                    Add to your post
+                                </span>
+                                <input id='inputImage' type="file" multiple accept='image/png, image/jpg, image/jpeg' 
+                                    style={{display:'none'}} 
+                                    onChange={handleImgInput}
+                                    />
+                            </div>
+                        </label>
                         <div className='post-target-btn' 
-                            style={(textValue === '') ? {backgroundColor:'#505151',cursor:'no-drop'} : {} }>
+                            style={(textValue === '' && postInputImg === undefined) ? {backgroundColor:'#505151',cursor:'no-drop'} : {} }
+                            onClick={postStatus}>
                             Post
                         </div>
                     </div>

@@ -46,8 +46,14 @@
     text-align: center;
 }
 
+.post-img{
+    display: flex;
+    justify-content: center;
+}
+
 .post-img img{
-    width: 100%;
+    min-width: 60%;
+    max-width: 100%;
 }
 
 .post-description{
