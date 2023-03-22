@@ -14,6 +14,12 @@ const Status = ({a,b}) => {
         setTextValue(e.target.value)
     }
 
+    function handleCloseModal() {
+        setTextValue('')
+        setPostInputImg()
+        setCreatePostModalOpen(false)
+    }
+
     function createPost() {
         setCreatePostModalOpen(true);
     }
@@ -73,7 +79,7 @@ const Status = ({a,b}) => {
                         <div>
                             Create post
                         </div>
-                        <div className='close-icon' onClick={()=>{setCreatePostModalOpen(false)}}>
+                        <div className='close-icon' onClick={handleCloseModal}>
                             <IconButton>
                                 <CloseIcon />
                             </IconButton>
