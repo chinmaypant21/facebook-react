@@ -3,12 +3,12 @@ import {Card, CardHeader, CardContent, IconButton, Skeleton} from '@mui/material
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import './Watch.css'
 
-
-
 const WatchCard = () => {
     return (
-        <Card>
-            <CardHeader
+        <Card className='watch-card'>
+            <CardHeader 
+                className='watch-card-head'
+
                 avatar={
                     <Skeleton animation="wave" variant="circular" width={40} height={40} />
                 }
@@ -33,9 +33,9 @@ const WatchCard = () => {
                 }
             />
             
-            <Skeleton sx={{ height: '30vh' }} animation="wave" variant="rectangular" />
+            <Skeleton className='watch-card-body' animation="wave" variant="rectangular" />
 
-            <CardContent>
+            <CardContent className='watch-card-foot'>
                 <Fragment>
                     <Skeleton animation="wave" height={10} style={{ marginBottom: 6 }} />
                     <Skeleton animation="wave" height={10} width="80%" />

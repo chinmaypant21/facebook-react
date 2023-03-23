@@ -1,0 +1,13 @@
+.watch-card{
+    background-color: unset !important;
+    border-radius: 0.6vw !important;
+}
+
+.watch-card-head, .watch-card-foot{
+    background-color: #1f2329d9 !important;
+}
+
+.watch-card-body{
+    height: 30vw !important;
+    background-color: #262b32c1 !important;
+}

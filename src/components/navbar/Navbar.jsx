@@ -30,7 +30,7 @@ const NavBar = () => {
                     </div>
                 </Link>
 
-                <Link to={'/communities'}>
+                <Link to={'/groups/feed'}>
                     <div>
                         <GroupIcon />
                     </div>

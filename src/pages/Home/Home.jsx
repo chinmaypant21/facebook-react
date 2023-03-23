@@ -10,6 +10,8 @@ const Home = () => {
                 <Routes>
                     <Route path='/' exact element={<Feed />}/>
                     <Route path='/watch' exact element={<Watch />}/>
+                    <Route path='/marketplace' exact element={<Watch />}/>
+                    <Route path='/groups/feed' exact element={<Watch />}/>
                 </Routes>
                 <FriendBar />
             </div>
