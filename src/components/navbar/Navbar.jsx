@@ -1,5 +1,6 @@
 import SearchBar from './SearchBar'
 import { IconButton } from '@mui/material'
+import { Link } from 'react-router-dom'
 import './NavBar.css'
 import { Logo, HomeIcon, WatchIcon, MarketIcon, GroupIcon, MenuIcon, MessengerIcon, NotifyIcon } from '../../utils/icons'
 const NavBar = () => {
@@ -11,21 +12,29 @@ const NavBar = () => {
             </div>
             
             <div className="nav-center">
-                <div>
-                    <HomeIcon />
-                </div>
+                <Link to={'/'}>
+                    <div>
+                        <HomeIcon />
+                    </div>
+                </Link>
 
-                <div>
-                    <WatchIcon />
-                </div>
+                <Link to={'/watch'}>
+                    <div>
+                        <WatchIcon />
+                    </div>
+                </Link>
 
-                <div>
-                    <MarketIcon />
-                </div>
+                <Link to={'/marketplace'}>
+                    <div>
+                        <MarketIcon />
+                    </div>
+                </Link>
 
-                <div>
-                    <GroupIcon />
-                </div>
+                <Link to={'/communities'}>
+                    <div>
+                        <GroupIcon />
+                    </div>
+                </Link>
             </div>
 
             <div className="nav-right">

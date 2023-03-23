@@ -1,6 +1,5 @@
 import "./Feed.css"
-import Post from "../post/Post";
-import Status from "../status/Status";
+import {Post, Status} from "..";
 import { Posts } from "../../utils/dummyData";
 import { useEffect, useState } from "react";
 
