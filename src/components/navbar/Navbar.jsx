@@ -1,9 +1,25 @@
-import SearchBar from './SearchBar'
-import { IconButton } from '@mui/material'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import './NavBar.css'
+import { IconButton } from '@mui/material'
+import SearchBar from './SearchBar'
 import { Logo, HomeIcon, WatchIcon, MarketIcon, GroupIcon, MenuIcon, MessengerIcon, NotifyIcon } from '../../utils/icons'
+import './NavBar.css'
+
 const NavBar = () => {
+    const [activeElement, setActiveElement] = useState()
+
+    const handleBtnClick = even => {
+        if (activeElement !== undefined) 
+            activeElement.classList.remove('testing')
+
+        setActiveElement(even.currentTarget)
+        even.currentTarget.classList.add('testing')
+        // console.log(activeElement)/
+        // activeElement.classList.add('testing')
+    
+
+    }
+
     return(
         <div className='navbar'>
             <div className="nav-left">
@@ -13,25 +29,25 @@ const NavBar = () => {
             
             <div className="nav-center">
                 <Link to={'/'}>
-                    <div>
+                    <div onClick={handleBtnClick}>
                         <HomeIcon />
                     </div>
                 </Link>
 
                 <Link to={'/watch'}>
-                    <div>
+                    <div onClick={handleBtnClick}>
                         <WatchIcon />
                     </div>
                 </Link>
 
                 <Link to={'/marketplace'}>
-                    <div>
+                    <div onClick={handleBtnClick}>
                         <MarketIcon />
                     </div>
                 </Link>
 
                 <Link to={'/groups/feed'}>
-                    <div>
+                    <div onClick={handleBtnClick}>
                         <GroupIcon />
                     </div>
                 </Link>

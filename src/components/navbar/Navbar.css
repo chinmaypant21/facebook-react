@@ -52,6 +52,17 @@
 .nav-center{
     flex: 5;
     justify-content: center;
+    column-gap: 0.5vw;
+}
+
+.testing{
+    /* background-color: blue; */
+    border-radius: 0 !important;
+    border-bottom: 0.3vw solid blue;
+}
+
+.testing:hover{
+    /* background-color: blue !important; */
 }
 
 .nav-center a{
