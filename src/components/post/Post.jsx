@@ -12,10 +12,22 @@ const Post = ({item}) => {
 
     const [imageLiked, setImageLiked] = useState(false)
     const [likeCount, setLikeCount] = useState(0)
+    const [likeReactionShow,setLikeReactionShow] = useState(false)
     const [commentCount, setCommentCount] = useState(0)
     const [commentText, setCommentText] = useState('')
     const [commentArray, setCommentArray] = useState([])
   
+    const handleLikeButton = () => {
+        if(!imageLiked)
+            setLikeReactionShow(true)
+    }
+
+    const handleClickReaction = () => {
+        setLikeCount(likeCount+1)
+        setImageLiked(true)
+        setLikeReactionShow(false)
+    }
+
     const updateLike = () => {
         if(!imageLiked){
             setLikeCount(likeCount+1)
@@ -29,8 +41,10 @@ const Post = ({item}) => {
     }
 
     const createComment = (comment) => {
-        setCommentArray([...commentArray,comment]);
-        setCommentCount(commentCount+1);
+        if (comment != ''){
+            setCommentArray([...commentArray,comment]);
+            setCommentCount(commentCount+1);
+        }
     }
 
     const handlePhotoURL = (photoURL) => (
@@ -86,11 +100,21 @@ const Post = ({item}) => {
                     <div>{commentCount} Comments</div>
                 </div>
                 <div className="impression-btn-container top-hr-outline">
-                    <div className="post-like-btn" onClick={updateLike} style={{color: imageLiked ? 'var(--like-color)' : 'unset'}}>
-                        <div className="like-react-popup">
+                    <div className="post-like-btn" 
+                        onMouseEnter={handleLikeButton}
+                        onClick={updateLike}
+                        style={{color: imageLiked ? 'var(--like-color)' : 'unset'}}>
+                        <div className="like-react-popup"
+                            onClick={updateLike}
+                            style={!likeReactionShow? {display:'none'} : {}}>
                         {
                             LikeReactions.map((icon)=>(
-                                <div><img src={icon}/></div>
+                                <div>
+                                    <img src={icon} 
+                                        onClick={handleClickReaction}
+                                        onMouseLeave={()=>{setLikeReactionShow(false)}}
+                                    />
+                                </div>
                             ))
                         }
                         </div>

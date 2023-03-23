@@ -47,6 +47,10 @@
     border-radius: 2vw;
 }
 
+.icon-btn *{
+    font-size: 1.4vw !important;
+}
+
 .icon-btn:hover{
     background-color: var(--bg-color-sec);
 }
