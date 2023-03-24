@@ -24,7 +24,7 @@
     column-gap: 0.5vw;
 }
 
-.nav-left > *:first-child{
+.nav-left .nav-logo-img, .nav-left a{
     height: 100%;
     width: 100%;
 }
@@ -99,5 +99,10 @@
 .nav-right > button{
     background-color: var(--bg-color-sec);
     color: var(--font-color-main);
-    border-radius: 2vw;
+    padding: 0.5vw;
+    /* border-radius: 2vw; */
+}
+
+.nav-right > button:last-child{
+    padding: 0;
 }

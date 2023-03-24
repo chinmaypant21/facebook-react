@@ -2,14 +2,19 @@ import "./SideBar.css"
 import { SideMenu, IconGradient } from "../../utils/iconUtils";
 import { HeartIcon } from "../../utils/icons";
 
-const SideBar = () => {
+const SideBar = ({profileIcon, profileName}) => {
     return (
         <div className="sidebar-container sidebar-fixed">
             <div className="sidebar-wrapper">
-                <IconGradient id='sidebar-icon-gradient' startGradient={'var(--icon-grad-i)'} stopGradient={'var(--icon-grad-f)'}/> 
+                <IconGradient id='sidebar-icon-gradient' startGradient={'var(--icon-grad-i)'} stopGradient={'var(--icon-grad-f)'}/>
+                <button className="sidebar-btn" style={{fontWeight:600, overflowX:'hidden'}}>
+                    <div className="profile-image-container">
+                        <img src={profileIcon} />
+                    </div>
+                    <div>{profileName}</div>
+                </button>
                 {
                     SideMenu.map((x,idx)=>(
-                        // console.log(x)
                         <button className="sidebar-btn" key={idx}>
                             <div>{x.icon}</div>
                             <div>{x.text}</div>

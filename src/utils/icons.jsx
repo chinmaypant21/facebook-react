@@ -7,6 +7,7 @@ export {Storefront as MarketIcon} from '@mui/icons-material';
 export {Groups as GroupIcon} from '@mui/icons-material';
 export {Public as PublicIcon} from '@mui/icons-material';
 export {Clear as CloseIcon} from '@mui/icons-material';
+export {TrendingFlat as ArrowIcon} from '@mui/icons-material';
 export {default as LikeIcon} from '@mui/icons-material/ThumbUpOffAlt';
 export {default as CommentIcon} from '@mui/icons-material/ChatBubbleOutline';
 export {default as EmojiIcon} from '@mui/icons-material/TagFaces';
@@ -18,9 +19,12 @@ export {default as AddPhotoIcon} from '@mui/icons-material/AddPhotoAlternate';
 export {default as LiveTvIcon} from '@mui/icons-material/LiveTv';
 
 export {default as GiftImg} from '../assets/gift.png'
+export {default as FbTextImg} from '../assets/fb_text.svg'
+export {default as AvatarIcon} from '../assets/person/avatar.jpg'
 
-export const Logo = () => (
-    <svg viewBox="0 0 36 36" fill="url(#jsc_s_2)" height="40" width="40">
+
+export const Logo = ({className}) => (
+    <svg viewBox="0 0 36 36" fill="url(#jsc_s_2)" height="40" width="40" className={className}>
         <defs>
             <linearGradient x1="50%" x2="50%" y1="97.0782153%" y2="0%" id="jsc_s_2">
                 <stop offset="0%" stopColor="#0062E0"></stop>

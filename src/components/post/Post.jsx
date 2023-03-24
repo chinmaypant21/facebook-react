@@ -63,10 +63,11 @@ const Post = ({item}) => {
             <div className="post-head">
                 <div className="post-author-profile">
                     <div className="profile-img">
-                        <img src={require(`../../${"assets/person/10.jpeg"}`)} />
+                        <img src={item.profilePicture || require(`../../${"assets/person/10.jpeg"}`)} />
                     </div>
                     <div>
-                        <div className="profile-name">John Doe</div>
+                        {/* {console.log(item)} */}
+                        <div className="profile-name">{item.username || 'John Doe'}</div>
                         <div className="post-time">{item.time || 'Just Now'} <span>&nbsp;·&nbsp;</span> <PublicIcon sx={{fontSize:"1vw"}}/></div>
                     </div>
                 </div>

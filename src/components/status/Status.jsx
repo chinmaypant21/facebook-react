@@ -1,10 +1,10 @@
-import './Status.css'
-import { LiveTvIcon, AddPhotoIcon, EmojiIcon, CloseIcon } from '../../utils/icons'
 import { useState } from 'react'
+import { LiveTvIcon, AddPhotoIcon, EmojiIcon, CloseIcon } from '../../utils/icons'
 import Modal from '@mui/material/Modal';
 import {IconButton, TextField} from "@mui/material"
+import './Status.css'
 
-const Status = ({a,b}) => {
+const Status = ({postData,setPostData, profileIcon, profileName}) => {
 
     const [createPostModalOpen, setCreatePostModalOpen] = useState(false)
     const [textValue,setTextValue] = useState('')
@@ -30,14 +30,15 @@ const Status = ({a,b}) => {
     }
 
     function postStatus() {
-        const e = {
-            // time: 'Just now',
+        const currentPost = {
+            profilePicture: profileIcon,
+            username: profileName,
             desc:textValue,
             photo:postInputImg
         }
 
         setTimeout(()=>{
-            b([e,...a])
+            setPostData([currentPost,...postData])
             setCreatePostModalOpen(false)
         },1000)
         setTextValue('')
@@ -48,10 +49,10 @@ const Status = ({a,b}) => {
         <div className="status-container">
             <div className="status-field">
                 <div className="profile-img">
-                    <img src={require('../../assets/person/1.jpeg')}/>
+                    <img src={profileIcon}/>
                 </div>
                 <div className="comment-input status-text-div" onClick={createPost}>
-                    <div>What's on your mind, John?</div>
+                    <div>What's on your mind, {profileName}?</div>
                 </div>
             </div>
             <div className="status-button impression-btn-container top-hr-outline">
@@ -92,7 +93,7 @@ const Status = ({a,b}) => {
                             minRows={4}
                             maxRows={5}
                             value={textValue}
-                            placeholder="What's on your mind, Chinmay?"
+                            placeholder={`What's on your mind, ${profileName}?`}
                             onChange={handleValueChange}
                         />
                         <div className='post-img-preview'>

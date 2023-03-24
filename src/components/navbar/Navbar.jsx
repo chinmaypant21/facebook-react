@@ -2,10 +2,10 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { IconButton } from '@mui/material'
 import SearchBar from './SearchBar'
-import { Logo, HomeIcon, WatchIcon, MarketIcon, GroupIcon, MenuIcon, MessengerIcon, NotifyIcon } from '../../utils/icons'
+import { Logo, HomeIcon, WatchIcon, MarketIcon, GroupIcon, MenuIcon, MessengerIcon, NotifyIcon, AvatarIcon } from '../../utils/icons'
 import './NavBar.css'
 
-const NavBar = () => {
+const NavBar = ({profileIcon}) => {
     const [activeElement, setActiveElement] = useState()
 
     const handleBtnClick = even => {
@@ -23,7 +23,9 @@ const NavBar = () => {
     return(
         <div className='navbar'>
             <div className="nav-left">
-                <Logo />
+                <Link to='/'>
+                    <Logo className='nav-logo-img'/>
+                </Link>
                 <SearchBar />
             </div>
             
@@ -67,7 +69,9 @@ const NavBar = () => {
                 </IconButton>
 
                 <IconButton>
-                    <div style={{height:'1em', width:'1em'}}></div>
+                    <div>
+                        <img src={AvatarIcon} style={{height:'2.7vw', width:'100%', borderRadius:'50%', objectFit:'cover'}}/>
+                    </div>
                 </IconButton>
 
             </div>
