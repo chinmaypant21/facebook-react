@@ -10,12 +10,12 @@ const NavBar = () => {
 
     const handleBtnClick = even => {
         if (activeElement !== undefined) 
-            activeElement.classList.remove('testing')
+            activeElement.classList.remove('nav-center-btn-active')
 
         setActiveElement(even.currentTarget)
-        even.currentTarget.classList.add('testing')
+        even.currentTarget.classList.add('nav-center-btn-active')
         // console.log(activeElement)/
-        // activeElement.classList.add('testing')
+        // activeElement.classList.add('nav-center-btn-active')
     
 
     }

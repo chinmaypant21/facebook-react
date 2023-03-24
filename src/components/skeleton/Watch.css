@@ -1,13 +1,22 @@
+.watch-wrapper{
+    display:flex;
+    flex-direction:column;
+    row-gap:2vw;
+    padding: 2vw 0;
+    margin: 0 6vw;
+}
+
 .watch-card{
     background-color: unset !important;
     border-radius: 0.6vw !important;
 }
 
 .watch-card-head, .watch-card-foot{
-    background-color: #1f2329d9 !important;
+    background-color: var(--nav-bg-color) !important;
+    padding: 1vw !important;
 }
 
 .watch-card-body{
     height: 30vw !important;
-    background-color: #262b32c1 !important;
+    background-color: var(--input-bg) !important;
 }

@@ -55,14 +55,14 @@
     column-gap: 0.5vw;
 }
 
-.testing{
-    /* background-color: blue; */
+.nav-center-btn-active{
     border-radius: 0 !important;
-    border-bottom: 0.3vw solid blue;
+    color: var(--primary-button-background);
+    border-bottom: 0.3vw solid var(--primary-button-background);
 }
 
-.testing:hover{
-    /* background-color: blue !important; */
+.nav-center-btn-active:hover{
+    background-color: unset !important;
 }
 
 .nav-center a{

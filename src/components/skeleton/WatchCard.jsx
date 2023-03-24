@@ -10,26 +10,26 @@ const WatchCard = () => {
                 className='watch-card-head'
 
                 avatar={
-                    <Skeleton animation="wave" variant="circular" width={40} height={40} />
+                    <Skeleton animation="wave" variant="circular" width={'2vw'} height={'2vw'} />
                 }
 
                 action={
                     <IconButton aria-label="settings">
-                    <MoreVertIcon />
+                        <MoreVertIcon sx={{fontSize:'2vw'}}/>
                     </IconButton>
                 }
                 
                 title={
                     <Skeleton
                     animation="wave"
-                    height={10}
+                    height={'0.6vw'}
                     width="80%"
-                    style={{ marginBottom: 6 }}
+                    style={{ marginBottom: '0.8vw' }}
                     />
                 }
                 
                 subheader={
-                    <Skeleton animation="wave" height={10} width="40%" />
+                    <Skeleton animation="wave" height={'0.6vw'} width="40%" />
                 }
             />
             
@@ -37,8 +37,8 @@ const WatchCard = () => {
 
             <CardContent className='watch-card-foot'>
                 <Fragment>
-                    <Skeleton animation="wave" height={10} style={{ marginBottom: 6 }} />
-                    <Skeleton animation="wave" height={10} width="80%" />
+                    <Skeleton animation="wave" height={'0.6vw'} style={{ marginBottom: '0.8vw' }} />
+                    <Skeleton animation="wave" height={'0.6vw'} width="80%" />
                 </Fragment>
             </CardContent>
         </Card>
