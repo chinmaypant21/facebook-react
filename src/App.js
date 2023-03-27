@@ -6,7 +6,6 @@ import Login from './pages/login/Login';
 
 
 function App() {
-
   const navigate = useNavigate();
   const [name, setName] = useState('')
 
